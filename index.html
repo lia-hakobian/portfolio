@@ -1,214 +1,1194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ofelya Hakobyan | Shopify Specialist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ofelya Hakobyan | Shopify Customization & Optimization</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090909;
+      --bg-soft: #111111;
+      --panel: rgba(255,255,255,0.04);
+      --panel-2: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.09);
+      --text: #f4f1ed;
+      --muted: #b7aea7;
+      --muted-2: #8e8780;
+      --accent: #7a1f2b;
+      --accent-2: #30463a;
+      --accent-3: #2a2019;
+      --shadow: 0 20px 60px rgba(0,0,0,0.42);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max: 1240px;
+    }
 
-<style>
-:root {
-  --bg:#090909;
-  --text:#f4f1ed;
-  --muted:#b2aaa3;
-  --accent:#7a1f2b;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body{
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(122, 31, 43, 0.20), transparent 28%),
+        radial-gradient(circle at 85% 18%, rgba(48, 70, 58, 0.14), transparent 22%),
+        radial-gradient(circle at bottom right, rgba(70, 40, 25, 0.14), transparent 24%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-/* NAV */
-nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 8%;
-  position:sticky;
-  top:0;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(10px);
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-nav a{color:var(--muted);margin-left:20px;}
-nav a:hover{color:white;}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-/* HERO */
-.hero{
-  padding:120px 8%;
-}
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
 
-.hero h1{
-  font-size:48px;
-  font-weight:800;
-}
+    /* NAV */
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(9, 9, 9, 0.66);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
 
-.hero p{
-  max-width:600px;
-  margin-top:15px;
-  color:var(--muted);
-}
+    nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:12px 22px;
-  border-radius:30px;
-  background:var(--accent);
-  color:white;
-  text-decoration:none;
-}
+    .brand {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text);
+      white-space: nowrap;
+    }
 
-/* SECTION */
-section{padding:90px 8%;}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
-/* ABOUT */
-.about p{
-  max-width:700px;
-  color:var(--muted);
-  margin-bottom:15px;
-}
+    .nav-links a {
+      font-size: 0.95rem;
+      color: var(--muted);
+      transition: 0.25s ease;
+    }
 
-/* MENTOR */
-.mentor{
-  margin-top:25px;
-  padding:20px;
-  border:1px solid rgba(255,255,255,0.1);
-  background:rgba(255,255,255,0.03);
-  border-radius:16px;
-}
+    .nav-links a:hover {
+      color: var(--text);
+    }
 
-/* SERVICES */
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
+    .nav-cta {
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      font-weight: 500;
+      transition: 0.25s ease;
+    }
 
-.card{
-  padding:20px;
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:16px;
-  background:rgba(255,255,255,0.03);
-}
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      border-color: rgba(122,31,43,0.38);
+      background: rgba(122,31,43,0.16);
+    }
 
-/* PORTFOLIO */
-.portfolio{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:20px;
-}
+    /* HERO */
+    .hero {
+      min-height: calc(100vh - 78px);
+      display: flex;
+      align-items: center;
+      padding: 72px 0 56px;
+    }
 
-.project{
-  position:relative;
-  overflow:hidden;
-  border-radius:18px;
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: center;
+    }
 
-.project img{
-  width:100%;
-  display:block;
-}
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      color: #dcc8bb;
+      font-size: 0.80rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 22px;
+    }
 
-.project::after{
-  content:"";
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:120px;
-  background:linear-gradient(to top, black, transparent);
-}
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #b14758);
+      box-shadow: 0 0 16px rgba(122,31,43,0.75);
+    }
 
-/* CTA */
-.cta{
-  text-align:center;
-}
+    h1 {
+      font-size: clamp(3rem, 6vw, 5.4rem);
+      line-height: 0.95;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      margin-bottom: 16px;
+      max-width: 760px;
+    }
 
-</style>
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      color: #d8c7ba;
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    .hero-copy {
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 1.04rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: 0.30s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7a1f2b, #5b1721);
+      color: #fff;
+      box-shadow: 0 14px 32px rgba(122,31,43,0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(122,31,43,0.34);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.03);
+      border-color: rgba(255,255,255,0.12);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      max-width: 780px;
+    }
+
+    .point {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      box-shadow: var(--shadow);
+    }
+
+    .point strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+      color: var(--text);
+    }
+
+    .point span {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .hero-side {
+      position: relative;
+      padding: 28px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-side::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(122,31,43,0.24), transparent 34%),
+        radial-gradient(circle at bottom left, rgba(48,70,58,0.16), transparent 30%);
+      pointer-events: none;
+    }
+
+    .hero-side > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .small-label {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: #d8c6b9;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .tag {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #eee4dd;
+      font-size: 0.9rem;
+    }
+
+    .mini-panel {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.06);
+      margin-top: 14px;
+    }
+
+    .mini-panel strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.98rem;
+    }
+
+    .mini-panel p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 34px;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #bb9198;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+    }
+
+    .section-sub {
+      max-width: 620px;
+      color: var(--muted);
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 22px;
+    }
+
+    .about-main,
+    .about-side {
+      padding: 30px;
+      border-radius: 24px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .about-main p,
+    .about-side p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .about-main p:last-child,
+    .about-side p:last-child {
+      margin-bottom: 0;
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .focus-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: #e7ddd5;
+      font-size: 0.95rem;
+    }
+
+    .focus-item::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8f2c3a, #44624f);
+      flex-shrink: 0;
+    }
+
+    .mentor-card {
+      margin-top: 20px;
+      padding: 22px;
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(122,31,43,0.12), rgba(48,70,58,0.10)),
+        rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .mentor-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .mentor-top strong {
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .mentor-badge {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #dcc8bb;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.04);
+      white-space: nowrap;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      grid-column: span 4;
+      min-height: 210px;
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+      overflow: hidden;
+      transition: 0.28s ease;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      inset: auto auto -40px -40px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(122,31,43,0.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(122,31,43,0.34);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.32);
+    }
+
+    .service-number {
+      font-size: 0.78rem;
+      color: #b58f95;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 1.18rem;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* PORTFOLIO */
+    .portfolio-wrap {
+      display: grid;
+      gap: 18px;
+    }
+
+    .featured-project {
+      position: relative;
+      min-height: 560px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #111;
+      box-shadow: var(--shadow);
+    }
+
+    .featured-project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .featured-project:hover img {
+      transform: scale(1.03);
+    }
+
+    .featured-project::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.20) 42%, rgba(0,0,0,0.06) 65%, rgba(0,0,0,0.02) 100%);
+      z-index: 1;
+    }
+
+    .featured-project::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 260px;
+      height: 120px;
+      background: linear-gradient(to top left, rgba(0,0,0,0.95), rgba(0,0,0,0.55), transparent);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .project-content {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+    }
+
+    .project-text {
+      max-width: 700px;
+    }
+
+    .project-kicker {
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #d5c3b7;
+      margin-bottom: 10px;
+    }
+
+    .project-title {
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .project-copy {
+      color: #d2c7c0;
+      max-width: 620px;
+      font-size: 0.98rem;
+    }
+
+    .project-side-tag {
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: #f3ece7;
+      font-size: 0.88rem;
+      white-space: nowrap;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+
+    .project-card {
+      grid-column: span 4;
+      position: relative;
+      min-height: 380px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #101010;
+      box-shadow: var(--shadow);
+      transition: 0.28s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(122,31,43,0.35);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.28) 40%, rgba(0,0,0,0.06) 70%, rgba(0,0,0,0.02) 100%);
+      z-index: 1;
+    }
+
+    .project-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 170px;
+      height: 90px;
+      background: linear-gradient(to top left, rgba(0,0,0,0.95), rgba(0,0,0,0.55), transparent);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .project-card-content {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 18px;
+      z-index: 2;
+    }
+
+    .project-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+      line-height: 1.18;
+    }
+
+    .project-card p {
+      color: #d1c8c2;
+      font-size: 0.92rem;
+      max-width: 90%;
+    }
+
+    .project-tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #eee4dd;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    /* STRENGTHS */
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .strength-card {
+      padding: 24px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .strength-card h4 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .strength-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* CTA */
+    .cta-box {
+      padding: 44px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at top left, rgba(122,31,43,0.22), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(48,70,58,0.15), transparent 30%),
+        rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin-bottom: 14px;
+      letter-spacing: -0.04em;
+    }
+
+    .cta-box p {
+      max-width: 700px;
+      margin: 0 auto 24px;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 34px 0 46px;
+      color: var(--muted-2);
+      font-size: 0.9rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1120px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .strength-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 930px) {
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        grid-column: span 6;
+      }
+
+      .project-card {
+        grid-column: span 6;
+      }
+
+      .featured-project {
+        min-height: 480px;
+      }
+
+      .project-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 52px;
+      }
+
+      .section {
+        padding: 74px 0;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .hero-side,
+      .about-main,
+      .about-side,
+      .cta-box {
+        padding: 22px;
+      }
+
+      .service-card,
+      .project-card {
+        grid-column: span 12;
+      }
+
+      .strength-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-project {
+        min-height: 410px;
+      }
+
+      .project-content {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+      }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-size: 2.55rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<nav>
-  <div>OFELYA HAKOBYAN</div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#work">Work</a>
-    <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank">Work With Me</a>
+  <div class="nav-wrap">
+    <div class="container">
+      <nav>
+        <a href="#" class="brand">Ofelya Hakobyan</a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#contact" class="nav-cta">Work With Me</a>
+        </div>
+      </nav>
+    </div>
   </div>
-</nav>
 
-<div class="hero">
-  <h1>Shopify Customization & Optimization</h1>
-  <p>I build and improve Shopify stores with a focus on structure, usability, and conversion.</p>
-  <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn">Contact via Upwork</a>
-</div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Shopify Specialist</div>
 
-<section id="about" class="about">
-  <h2>About</h2>
-  <p>Product setup, store structure, and Shopify customization using HTML/CSS and sections.</p>
-  <p>I focus on clean layouts, smooth experience, and practical improvements that support conversion.</p>
+            <h1>Shopify Customization & Optimization</h1>
+            <div class="hero-subtitle">HTML/CSS, UX & Sales Focus</div>
 
-  <div class="mentor">
-    <strong>Mentorship</strong>
-    <p>Trained under Mentor Mariam — Success Academy</p>
-  </div>
-</section>
+            <p class="hero-copy">
+              I build and improve Shopify stores with a focus on structure, usability, and conversion — through cleaner layouts, practical customization, and sharper storefront flow.
+            </p>
 
-<section id="services">
-  <h2>Services</h2>
-  <div class="services">
-    <div class="card">Customization & Fixes</div>
-    <div class="card">Store Optimization</div>
-    <div class="card">Product Pages</div>
-    <div class="card">Store Setup</div>
-    <div class="card">Conversion Support</div>
-    <div class="card">Maintenance</div>
-  </div>
-</section>
+            <div class="hero-actions">
+              <a href="#work" class="btn btn-primary">View Selected Work</a>
+              <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-secondary">Contact via Upwork</a>
+            </div>
 
-<section id="work">
-  <h2>Selected Work</h2>
+            <div class="hero-points">
+              <div class="point">
+                <strong>Store Structure</strong>
+                <span>Clearer organization and smoother page flow.</span>
+              </div>
+              <div class="point">
+                <strong>UX Focus</strong>
+                <span>Layouts built to feel easier to browse and shop.</span>
+              </div>
+              <div class="point">
+                <strong>Sales-Aware Thinking</strong>
+                <span>Design choices that support clarity and action.</span>
+              </div>
+            </div>
+          </div>
 
-  <div class="portfolio">
+          <div class="hero-side">
+            <span class="small-label">What I Work With</span>
 
-    <div class="project">
-      <img src="images/hero1.png">
+            <div class="tag-list">
+              <span class="tag">Shopify Sections</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">Product Setup</span>
+              <span class="tag">Collections</span>
+              <span class="tag">Store UX</span>
+              <span class="tag">Optimization</span>
+            </div>
+
+            <div class="mini-panel">
+              <strong>Approach</strong>
+              <p>Clean structure, practical improvements, and no unnecessary complexity.</p>
+            </div>
+
+            <div class="mini-panel">
+              <strong>Focus</strong>
+              <p>Better usability, stronger presentation, and more polished storefront experience.</p>
+            </div>
+
+            <div class="mini-panel">
+              <strong>Work Style</strong>
+              <p>Independent, detail-focused, and clear in communication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">About</div>
+            <h2 class="section-title">Built around structure, usability, and practical improvement.</h2>
+          </div>
+
+          <p class="section-sub">
+            Shopify support focused on cleaner layouts, stronger organization, and better customer flow.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-main">
+            <p>
+              I work with Shopify customization, product setup, collection structure, and storefront improvements using HTML/CSS and Shopify sections.
+            </p>
+
+            <p>
+              My focus is simple: cleaner layouts, smoother flow, and more usable storefront experiences that feel polished and intentional.
+            </p>
+
+            <p>
+              My background in sales and account management helps me think beyond visuals and pay attention to how products are presented, understood, and acted on.
+            </p>
+
+            <p>
+              I aim to deliver practical improvements that support both usability and performance.
+            </p>
+          </div>
+
+          <div class="about-side">
+            <div class="section-kicker" style="margin-bottom:16px;">Core Focus</div>
+
+            <div class="focus-list">
+              <div class="focus-item">Clean storefront structure</div>
+              <div class="focus-item">Mobile-friendly thinking</div>
+              <div class="focus-item">Smoother shopping experience</div>
+              <div class="focus-item">Practical Shopify customization</div>
+              <div class="focus-item">Clearer product presentation</div>
+              <div class="focus-item">Conversion-aware updates</div>
+            </div>
+
+            <div class="mentor-card">
+              <div class="mentor-top">
+                <strong>Mentor Mariam</strong>
+                <span class="mentor-badge">Success Academy</span>
+              </div>
+              <p>
+                Trained under Mentor Mariam through Success Academy, with a focus on Shopify structure, usability, and practical storefront improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Services</div>
+            <h2 class="section-title">What I can help Shopify stores with.</h2>
+          </div>
+
+          <p class="section-sub">
+            Focused support for setup, customization, product presentation, and storefront optimization.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-number">01</div>
+            <h3>Customization & Fixes</h3>
+            <p>Theme edits, section updates, layout fixes, and storefront refinements.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">02</div>
+            <h3>Store Optimization</h3>
+            <p>Usability-focused updates to improve structure, clarity, and shopping flow.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">03</div>
+            <h3>Product Page Improvements</h3>
+            <p>Cleaner product layouts with better hierarchy and presentation.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">04</div>
+            <h3>Store Setup & Structure</h3>
+            <p>Product setup, collection organization, and stronger storefront structure.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">05</div>
+            <h3>Conversion Support</h3>
+            <p>Practical visual and structural improvements that support action.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">06</div>
+            <h3>Maintenance & Updates</h3>
+            <p>Ongoing edits, fixes, and storefront improvements as the store evolves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Selected Work</div>
+            <h2 class="section-title">Store visuals that show structure, presentation, and flow.</h2>
+          </div>
+
+          <p class="section-sub">
+            A selection of Shopify storefront screens, product layouts, collection views, and content sections.
+          </p>
+        </div>
+
+        <div class="portfolio-wrap">
+          <article class="featured-project">
+            <img src="images/hero1.png" alt="Shopify hero section preview">
+            <div class="project-content">
+              <div class="project-text">
+                <div class="project-kicker">Featured Project</div>
+                <h3 class="project-title">Shopify Store Hero & Visual Direction</h3>
+                <p class="project-copy">
+                  A strong landing experience built around bold visual composition, premium branding, and clean navigation structure.
+                </p>
+              </div>
+
+              <div class="project-side-tag">Homepage / Hero</div>
+            </div>
+          </article>
+
+          <div class="portfolio-grid">
+            <article class="project-card">
+              <img src="images/hero2.png" alt="Shopify homepage visual frame">
+              <div class="project-card-content">
+                <span class="project-tag">Visual Frame</span>
+                <h3>Motion-Based Hero Preview</h3>
+                <p>Video-based storefront styling translated into a strong static presentation.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="images/grid.png" alt="Shopify category grid">
+              <div class="project-card-content">
+                <span class="project-tag">Collection Grid</span>
+                <h3>Category Layout & Navigation</h3>
+                <p>Structured category blocks with a clean premium storefront feel.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="images/journal.png" alt="Shopify journal section">
+              <div class="project-card-content">
+                <span class="project-tag">Content Section</span>
+                <h3>Journal / Editorial Section</h3>
+                <p>Brand content presented in a layout that feels polished and intentional.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="images/kitchen.png" alt="Shopify collection page">
+              <div class="project-card-content">
+                <span class="project-tag">Collection Page</span>
+                <h3>Collection Banner & Product Listing</h3>
+                <p>Clear category entry with visual hierarchy and organized product display.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="images/product.png" alt="Shopify product page">
+              <div class="project-card-content">
+                <span class="project-tag">Product Page</span>
+                <h3>Product Layout & CTA Structure</h3>
+                <p>Focused product detail page with strong image balance and action flow.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="images/footer.png" alt="Shopify footer and contact section">
+              <div class="project-card-content">
+                <span class="project-tag">Store Support</span>
+                <h3>Footer, Contact & Store Information</h3>
+                <p>Supporting sections built for clarity, trust, and cleaner user experience.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Strengths</div>
+            <h2 class="section-title">How I approach the work.</h2>
+          </div>
+
+          <p class="section-sub">
+            Practical, detail-focused, and built around what improves the storefront without adding noise.
+          </p>
+        </div>
+
+        <div class="strength-grid">
+          <div class="strength-card">
+            <h4>Structured Thinking</h4>
+            <p>I look at how pages connect, how users move, and where the experience can be improved.</p>
+          </div>
+
+          <div class="strength-card">
+            <h4>Sales Perspective</h4>
+            <p>I pay attention to how products are presented and how design supports decision-making.</p>
+          </div>
+
+          <div class="strength-card">
+            <h4>Clean Execution</h4>
+            <p>I focus on layouts that feel polished, consistent, and easier to use.</p>
+          </div>
+
+          <div class="strength-card">
+            <h4>Independent Workflow</h4>
+            <p>I work independently, communicate clearly, and stay focused on useful results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="section-kicker">Let’s Work Together</div>
+          <h2>Need a Shopify store that feels cleaner, sharper, and easier to shop?</h2>
+          <p>
+            Available for Shopify customization, product page improvement, store setup, optimization, and ongoing storefront support.
+          </p>
+
+          <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">Contact via Upwork</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <div>© 2026 Ofelya Hakobyan</div>
+        <div>Shopify Customization & Optimization</div>
+      </div>
     </div>
-
-    <div class="project">
-      <img src="images/hero2.png">
-    </div>
-
-    <div class="project">
-      <img src="images/grid.png">
-    </div>
-
-    <div class="project">
-      <img src="images/journal.png">
-    </div>
-
-    <div class="project">
-      <img src="images/product.png">
-    </div>
-
-    <div class="project">
-      <img src="images/kitchen.png">
-    </div>
-
-  </div>
-</section>
-
-<section class="cta">
-  <h2>Need Shopify improvements?</h2>
-  <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn">Contact via Upwork</a>
-</section>
+  </footer>
 
 </body>
 </html>
