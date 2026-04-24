@@ -147,15 +147,14 @@
 
     h1,
     .section-title,
-    .upwork-box h2,
-    .cta-box h2 {
+    .final-box h2 {
       font-family: 'Cormorant Garamond', serif;
     }
 
     h1 {
       max-width: 760px;
-      font-size: clamp(3.3rem, 5.3vw, 5.1rem);
-      line-height: 0.98;
+      font-size: clamp(3.1rem, 5vw, 4.9rem);
+      line-height: 1;
       font-weight: 700;
       letter-spacing: -0.035em;
       margin-bottom: 22px;
@@ -332,6 +331,27 @@
       font-size: 0.98rem;
     }
 
+    .about-box {
+      padding: 42px;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at top left, rgba(122,31,43,0.16), transparent 32%),
+        rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .about-box p {
+      max-width: 800px;
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .about-box p:last-child {
+      margin-bottom: 0;
+    }
+
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -377,27 +397,6 @@
       font-size: 0.94rem;
     }
 
-    .about-box {
-      padding: 42px;
-      border-radius: 34px;
-      background:
-        radial-gradient(circle at top left, rgba(122,31,43,0.16), transparent 32%),
-        rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .about-box p {
-      max-width: 800px;
-      color: var(--muted);
-      font-size: 1rem;
-      margin-bottom: 16px;
-    }
-
-    .about-box p:last-child {
-      margin-bottom: 0;
-    }
-
     .process {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -432,9 +431,8 @@
       font-size: 0.93rem;
     }
 
-    .upwork-box,
-    .cta-box {
-      padding: 46px;
+    .final-box {
+      padding: 52px;
       border-radius: 34px;
       text-align: center;
       background:
@@ -445,18 +443,17 @@
       box-shadow: var(--shadow);
     }
 
-    .upwork-box h2,
-    .cta-box h2 {
+    .final-box h2 {
+      max-width: 850px;
+      margin: 0 auto 18px;
       font-size: clamp(2.4rem, 4vw, 4rem);
       line-height: 1.02;
       letter-spacing: -0.04em;
       font-weight: 600;
-      margin-bottom: 16px;
     }
 
-    .upwork-box p,
-    .cta-box p {
-      max-width: 620px;
+    .final-box p {
+      max-width: 640px;
       margin: 0 auto 24px;
       color: var(--muted);
       font-size: 0.98rem;
@@ -477,6 +474,13 @@
       border: 1px solid rgba(255,255,255,0.08);
       color: #eee4dd;
       font-size: 0.9rem;
+    }
+
+    .final-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     footer {
@@ -554,9 +558,12 @@
 
       .hero-card,
       .about-box,
-      .upwork-box,
-      .cta-box {
+      .final-box {
         padding: 24px;
+      }
+
+      .final-box h2 {
+        font-size: 2.55rem;
       }
     }
   </style>
@@ -572,8 +579,7 @@
           <a href="#about">About</a>
           <a href="#services">What I Do</a>
           <a href="#process">How I Work</a>
-          <a href="#work">Work</a>
-          <a href="#contact" class="nav-cta">Work With Me</a>
+          <a href="#work" class="nav-cta">Work With Me</a>
         </div>
       </nav>
     </div>
@@ -584,16 +590,16 @@
       <div class="container">
         <div class="hero-grid">
           <div>
-            <div class="eyebrow">Shopify Specialist</div>
+            <div class="eyebrow">Shopify Customization • UX • HTML/CSS</div>
 
-            <h1>Hi, I’m Ofelya. I improve Shopify stores.</h1>
+            <h1>Shopify stores, cleaned up and improved.</h1>
 
             <p class="hero-lead">
-              I help make Shopify stores clearer, easier to use, and better structured.
+              I help improve Shopify stores through better structure, cleaner product pages, and practical customization.
             </p>
 
             <p class="hero-copy">
-              My work focuses on product pages, collections, storefront flow, and practical Shopify customization using HTML/CSS.
+              Store setup, collections, product flow, and HTML/CSS theme edits.
             </p>
 
             <div class="hero-actions">
@@ -637,12 +643,8 @@
         <div class="section-head">
           <div>
             <div class="section-kicker">About</div>
-            <h2 class="section-title">A practical Shopify specialist with a sales-aware eye.</h2>
+            <h2 class="section-title">Practical Shopify support with a sales-aware eye.</h2>
           </div>
-
-          <p class="section-sub">
-            I care about how a store looks, how it works, and how clearly it guides a customer.
-          </p>
         </div>
 
         <div class="about-box">
@@ -745,9 +747,10 @@
 
     <section id="work" class="section">
       <div class="container">
-        <div class="upwork-box">
-          <div class="section-kicker">Work</div>
-          <h2>Full portfolio and work details are available on Upwork.</h2>
+        <div class="final-box">
+          <div class="section-kicker">Work & Contact</div>
+
+          <h2>Full portfolio, work details, and contact are available on Upwork.</h2>
 
           <p>
             View my profile, services, project details, and current availability directly on Upwork.
@@ -760,23 +763,10 @@
             <span class="pill">HTML/CSS edits</span>
           </div>
 
-          <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">View Upwork Profile</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="cta-box">
-          <div class="section-kicker">Let’s Work Together</div>
-
-          <h2>Need help improving your Shopify store?</h2>
-
-          <p>
-            I can help with store setup, product pages, customization, optimization, and ongoing Shopify updates.
-          </p>
-
-          <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">Contact via Upwork</a>
+          <div class="final-actions">
+            <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">View Upwork Profile</a>
+            <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-secondary">Contact via Upwork</a>
+          </div>
         </div>
       </div>
     </section>
