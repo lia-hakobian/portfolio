@@ -3,652 +3,339 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Ofelya Hakobyan | Shopify Specialist</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0b0b0c;
-      --panel: #121213;
-      --panel-soft: #171718;
-      --card: #1b1b1d;
-      --border: rgba(255,255,255,0.09);
-      --text: #f4f1ed;
-      --muted: #b6ada6;
-      --muted-2: #8f8780;
-      --accent: #8b2331;
-      --accent-soft: rgba(139,35,49,0.18);
-      --gold: #d2b48c;
-      --shadow: 0 24px 70px rgba(0,0,0,0.45);
-      --max: 1180px;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: "Inter", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(139,35,49,0.18), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(48,70,58,0.16), transparent 28%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
+      background: #0b0b0c;
+      font-family: 'Inter', sans-serif;
+      color: #f4f1ed;
+      line-height: 1.5;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    /* main container */
+    .app {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
     }
 
-    .page {
-      width: min(92%, var(--max));
-      margin: 34px auto;
-      border-radius: 28px;
-      background: rgba(18,18,19,0.88);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      overflow: hidden;
+    /* cards and panels — keep colors */
+    .card-dark {
+      background: #121213;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 2rem;
     }
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 24px 32px;
-      border-bottom: 1px solid var(--border);
-      background: rgba(15,15,16,0.8);
-      backdrop-filter: blur(14px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    .card-soft {
+      background: #171718;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 1.75rem;
     }
 
-    .brand {
-      font-size: 0.9rem;
-      font-weight: 800;
-      letter-spacing: 0.16em;
+    .accent-badge {
+      background: rgba(139,35,49,0.18);
+      color: #d2b48c;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 2rem;
+      padding: 0.3rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    nav a {
-      padding: 10px 14px;
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 0.92rem;
-      transition: 0.25s ease;
-    }
-
-    nav a:hover,
-    nav a.active {
-      color: var(--text);
-      background: rgba(255,255,255,0.055);
-    }
-
-    .nav-cta {
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.04);
-      color: var(--text) !important;
-    }
-
-    main {
-      padding: 44px 34px 36px;
-    }
-
-    section {
-      padding: 34px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.065);
-    }
-
-    section:last-child {
-      border-bottom: 0;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 28px;
-      align-items: stretch;
-      padding-top: 12px;
-    }
-
-    .intro-card,
-    .focus-card,
-    .content-card,
-    .cta-card {
-      border-radius: 24px;
-      background:
-        radial-gradient(circle at top left, var(--accent-soft), transparent 35%),
-        var(--panel-soft);
-      border: 1px solid var(--border);
-      box-shadow: 0 16px 42px rgba(0,0,0,0.28);
-    }
-
-    .intro-card {
-      padding: 34px;
-      min-height: 390px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .eyebrow {
       display: inline-flex;
-      width: fit-content;
       align-items: center;
-      gap: 9px;
-      padding: 9px 13px;
-      margin-bottom: 22px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.045);
-      border: 1px solid var(--border);
-      color: var(--gold);
-      font-size: 0.74rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      gap: 0.5rem;
     }
 
-    .eyebrow::before {
+    .accent-badge::before {
       content: "";
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
+      background: #8b2331;
       border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 14px rgba(139,35,49,0.8);
-    }
-
-    h1 {
-      max-width: 650px;
-      font-size: clamp(2.5rem, 5vw, 4.6rem);
-      line-height: 0.98;
-      letter-spacing: -0.055em;
-      font-weight: 900;
-      margin-bottom: 20px;
-    }
-
-    .hero-lead {
-      max-width: 620px;
-      color: #ded2c9;
-      font-size: 1.08rem;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-
-    .hero-copy {
-      max-width: 580px;
-      color: var(--muted);
-      font-size: 0.98rem;
-      margin-bottom: 28px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+      display: inline-block;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 13px 20px;
-      border-radius: 999px;
-      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 3rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      text-decoration: none;
       border: 1px solid transparent;
-      transition: 0.28s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #641823);
-      color: #fff;
-      box-shadow: 0 14px 32px rgba(139,35,49,0.28);
+      background: linear-gradient(135deg, #8b2331, #641823);
+      color: white;
+      box-shadow: 0 12px 24px rgba(139,35,49,0.25);
     }
 
-    .btn-secondary {
-      background: rgba(255,255,255,0.035);
-      border-color: var(--border);
-      color: var(--text);
-    }
-
-    .btn:hover {
+    .btn-primary:hover {
       transform: translateY(-2px);
+      box-shadow: 0 18px 30px rgba(139,35,49,0.35);
     }
 
-    .focus-card {
-      padding: 28px;
+    .btn-outline {
+      background: transparent;
+      border-color: rgba(255,255,255,0.2);
+      color: #f4f1ed;
     }
 
-    .focus-card h2 {
-      font-size: 1.35rem;
-      line-height: 1.2;
-      margin-bottom: 20px;
+    .btn-outline:hover {
+      border-color: #8b2331;
+      background: rgba(139,35,49,0.1);
+    }
+
+    /* layout */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    /* responsive */
+    @media (max-width: 1000px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 760px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .app { padding: 1.5rem; }
+    }
+
+    /* typography */
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
       letter-spacing: -0.03em;
     }
 
-    .focus-list {
-      display: grid;
-      gap: 12px;
+    h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
-    .focus-item {
-      padding: 16px;
-      border-radius: 18px;
-      background: rgba(0,0,0,0.18);
-      border: 1px solid rgba(255,255,255,0.065);
+    .text-muted {
+      color: #b6ada6;
     }
 
-    .focus-item strong {
-      display: block;
-      font-size: 0.98rem;
-      margin-bottom: 4px;
+    .text-gold {
+      color: #d2b48c;
     }
 
-    .focus-item span {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
+    /* spacing */
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 1rem; }
+    .mt-3 { margin-top: 1.5rem; }
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 1rem; }
+    .mb-3 { margin-bottom: 1.5rem; }
+    .mb-4 { margin-bottom: 2rem; }
+    .p-5 { padding: 2rem; }
+    .p-6 { padding: 2.5rem; }
+    .gap-2 { gap: 1rem; }
+    .flex { display: flex; }
+    .flex-wrap { flex-wrap: wrap; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .text-center { text-align: center; }
 
-    .mentor {
-      margin-top: 14px;
-      padding: 18px;
-      border-radius: 18px;
-      background:
-        linear-gradient(135deg, rgba(139,35,49,0.18), rgba(48,70,58,0.12)),
-        rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.09);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .mentor::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+    hr {
+      border: none;
       height: 1px;
-      width: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+      background: rgba(255,255,255,0.08);
+      margin: 1rem 0;
     }
 
-    .small-label {
-      display: block;
-      color: #cfa6ad;
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+    /* hover effects */
+    .service-card, .step-card {
+      transition: all 0.2s;
     }
-
-    .mentor strong {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .mentor p {
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .section-head {
-      margin-bottom: 22px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-      font-weight: 850;
-      margin-top: 6px;
-      max-width: 760px;
-    }
-
-    .content-card {
-      padding: 28px;
-    }
-
-    .about-text {
-      max-width: 850px;
-    }
-
-    .about-text p {
-      color: var(--muted);
-      margin-bottom: 14px;
-      font-size: 0.98rem;
-    }
-
-    .about-text p:last-child {
-      margin-bottom: 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .service,
-    .step {
-      min-height: 185px;
-      padding: 22px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.075);
-      transition: 0.28s ease;
-    }
-
-    .service:hover,
-    .step:hover {
-      transform: translateY(-4px);
-      border-color: rgba(139,35,49,0.35);
-      background: rgba(255,255,255,0.052);
-    }
-
-    .pill-label {
-      display: inline-block;
-      padding: 7px 10px;
-      margin-bottom: 18px;
-      border-radius: 999px;
-      color: #cfa6ad;
-      background: rgba(255,255,255,0.045);
-      border: 1px solid rgba(255,255,255,0.08);
-      font-size: 0.7rem;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    .service h3,
-    .step h3 {
-      font-size: 1rem;
-      line-height: 1.25;
-      margin-bottom: 9px;
-    }
-
-    .service p,
-    .step p {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .cta-card {
-      padding: 38px;
-      text-align: center;
-      background:
-        radial-gradient(circle at top left, rgba(139,35,49,0.22), transparent 34%),
-        radial-gradient(circle at bottom right, rgba(48,70,58,0.16), transparent 32%),
-        var(--panel-soft);
-    }
-
-    .cta-card h2 {
-      max-width: 740px;
-      margin: 0 auto 14px;
-      font-size: clamp(2rem, 3.5vw, 3.1rem);
-      line-height: 1.05;
-      letter-spacing: -0.05em;
-      font-weight: 850;
-    }
-
-    .cta-card p {
-      max-width: 600px;
-      margin: 0 auto 24px;
-      color: var(--muted);
-    }
-
-    footer {
-      padding: 24px 34px 32px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-      color: var(--muted-2);
-      font-size: 0.88rem;
-    }
-
-    @media (max-width: 1050px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 700px) {
-      .page {
-        width: min(94%, var(--max));
-        margin: 16px auto;
-        border-radius: 22px;
-      }
-
-      header {
-        position: static;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
-
-      nav {
-        justify-content: flex-start;
-      }
-
-      nav a {
-        padding: 8px 10px;
-      }
-
-      main {
-        padding: 24px 18px;
-      }
-
-      section {
-        padding: 28px 0;
-      }
-
-      .intro-card,
-      .focus-card,
-      .content-card,
-      .cta-card {
-        padding: 22px;
-      }
-
-      h1 {
-        font-size: 2.65rem;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      footer {
-        padding: 22px 20px;
-      }
+    .service-card:hover, .step-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(139,35,49,0.4);
+      background: rgba(255,255,255,0.03);
     }
   </style>
 </head>
-
 <body>
-  <div class="page">
-    <header>
-      <a href="#" class="brand">Ofelya Hakobyan</a>
+<div class="app">
 
-      <nav>
-        <a href="#about" class="active">About</a>
-        <a href="#services">What I Do</a>
-        <a href="#process">How I Work</a>
-        <a href="#work" class="nav-cta">Work With Me</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="intro-card">
-          <div class="eyebrow">Shopify Customization • UX • HTML/CSS</div>
-
-          <h1>Shopify stores that feel clear, polished, and easy to shop.</h1>
-
-          <p class="hero-lead">
-            I improve store structure, product pages, and customer flow through practical Shopify customization.
-          </p>
-
-          <p class="hero-copy">
-            Store setup, collections, product flow, and HTML/CSS theme edits.
-          </p>
-
-          <div class="actions">
-            <a href="#services" class="btn btn-primary">See What I Do</a>
-            <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-secondary">View Upwork</a>
-          </div>
-        </div>
-
-        <aside class="focus-card">
-          <h2>Inside a Shopify store, I focus on three things.</h2>
-
-          <div class="focus-list">
-            <div class="focus-item">
-              <strong>Structure</strong>
-              <span>Cleaner pages, collections, and layout flow.</span>
-            </div>
-
-            <div class="focus-item">
-              <strong>Usability</strong>
-              <span>A smoother experience for customers.</span>
-            </div>
-
-            <div class="focus-item">
-              <strong>Conversion</strong>
-              <span>Better product presentation and clearer actions.</span>
-            </div>
-          </div>
-
-          <div class="mentor">
-            <span class="small-label">Mentorship</span>
-            <strong>Mentor Mariam / Success Academy</strong>
-            <p>Trained with a focus on Shopify structure, usability, and practical storefront execution.</p>
-          </div>
-        </aside>
-      </section>
-
-      <section id="about">
-        <div class="section-head">
-          <span class="small-label">About</span>
-          <h2>Practical Shopify support with a sales-aware eye.</h2>
-        </div>
-
-        <div class="content-card">
-          <div class="about-text">
-            <p>I work with Shopify store setup, product organization, collection structure, theme sections, and front-end customization.</p>
-            <p>My background in sales and account management helps me understand customer behavior, product presentation, and decision-making.</p>
-            <p>The goal is simple: make the store cleaner, easier to shop, and more polished.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="services">
-        <div class="section-head">
-          <span class="small-label">What I Do</span>
-          <h2>Focused Shopify support without overcomplicating the store.</h2>
-        </div>
-
-        <div class="grid">
-          <div class="service">
-            <span class="pill-label">Setup</span>
-            <h3>Store Setup & Structure</h3>
-            <p>Products, collections, pages, and store flow organized clearly.</p>
-          </div>
-
-          <div class="service">
-            <span class="pill-label">Product</span>
-            <h3>Product Page Improvement</h3>
-            <p>Cleaner product layouts, better hierarchy, and stronger CTA focus.</p>
-          </div>
-
-          <div class="service">
-            <span class="pill-label">Custom</span>
-            <h3>Shopify Customization</h3>
-            <p>Theme edits, section adjustments, and basic HTML/CSS improvements.</p>
-          </div>
-
-          <div class="service">
-            <span class="pill-label">UX</span>
-            <h3>Store Optimization</h3>
-            <p>UX-focused improvements that make the store easier to browse and use.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="process">
-        <div class="section-head">
-          <span class="small-label">How I Work</span>
-          <h2>Simple process. Clear improvements.</h2>
-        </div>
-
-        <div class="grid">
-          <div class="step">
-            <span class="pill-label">Review</span>
-            <h3>Understand the store</h3>
-            <p>Layout, products, flow, and current issues.</p>
-          </div>
-
-          <div class="step">
-            <span class="pill-label">Structure</span>
-            <h3>Find the friction</h3>
-            <p>What needs clearer flow, hierarchy, or organization.</p>
-          </div>
-
-          <div class="step">
-            <span class="pill-label">Improve</span>
-            <h3>Apply practical edits</h3>
-            <p>Shopify changes, layout updates, and section refinements.</p>
-          </div>
-
-          <div class="step">
-            <span class="pill-label">Polish</span>
-            <h3>Check the details</h3>
-            <p>Spacing, mobile behavior, clarity, and presentation.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="work">
-        <div class="cta-card">
-          <span class="small-label">Work & Contact</span>
-          <h2>Full portfolio, work details, and contact are available on Upwork.</h2>
-          <p>View my profile, services, project details, and current availability directly on Upwork.</p>
-
-          <div class="actions" style="justify-content:center;">
-            <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">View Upwork Profile</a>
-            <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-secondary">Contact via Upwork</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div>© 2026 Ofelya Hakobyan</div>
-      <div>Shopify Customization & Optimization</div>
-    </footer>
+  <!-- header -->
+  <div class="flex justify-between items-center flex-wrap" style="margin-bottom: 3rem;">
+    <div>
+      <span style="font-weight: 800; letter-spacing: -0.02em; font-size: 1.2rem;">Ofelya Hakobyan</span>
+    </div>
+    <div class="flex gap-2 flex-wrap mt-1">
+      <a href="#about" style="color: #b6ada6; text-decoration: none; padding: 0.5rem 0.8rem; font-weight: 500;">About</a>
+      <a href="#services" style="color: #b6ada6; text-decoration: none; padding: 0.5rem 0.8rem; font-weight: 500;">Services</a>
+      <a href="#process" style="color: #b6ada6; text-decoration: none; padding: 0.5rem 0.8rem; font-weight: 500;">Process</a>
+      <a href="#work" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.15); border-radius: 2rem; padding: 0.5rem 1.2rem; text-decoration: none; color: white; font-weight: 600;">Work with me</a>
+    </div>
   </div>
+
+  <!-- hero section -->
+  <div class="grid-2" style="margin-bottom: 4rem;">
+    <!-- left block -->
+    <div class="card-dark p-6" style="display: flex; flex-direction: column; justify-content: center;">
+      <div class="accent-badge" style="width: fit-content; margin-bottom: 1.2rem;">Shopify Customization</div>
+      <h1>Clean, convert-ready stores that feel effortless.</h1>
+      <p class="text-muted" style="font-size: 1.1rem; margin: 1rem 0 0.8rem 0;">UX-led Shopify edits — structure, product pages, and conversion flow.</p>
+      <p style="color: #8f8780; margin-bottom: 1.8rem;">Theme adjustments, collections, and front-end refinement without the clutter.</p>
+      <div class="flex gap-2">
+        <a href="#services" class="btn btn-primary">Explore services</a>
+        <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-outline">Upwork profile</a>
+      </div>
+    </div>
+
+    <!-- right block / focus -->
+    <div class="card-soft p-6">
+      <div class="accent-badge" style="margin-bottom: 1rem;">Core focus</div>
+      <h3 style="margin-bottom: 1rem;">Three pillars of a high-performance shop</h3>
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="background: rgba(0,0,0,0.2); border-radius: 1.2rem; padding: 1rem; border: 1px solid rgba(255,255,255,0.05);">
+          <strong style="display: block;">Structure</strong>
+          <span class="text-muted" style="font-size: 0.9rem;">Logical collections, clean layout, easy navigation.</span>
+        </div>
+        <div style="background: rgba(0,0,0,0.2); border-radius: 1.2rem; padding: 1rem; border: 1px solid rgba(255,255,255,0.05);">
+          <strong style="display: block;">Usability</strong>
+          <span class="text-muted" style="font-size: 0.9rem;">Reduced friction, mobile polish, intuitive flow.</span>
+        </div>
+        <div style="background: rgba(0,0,0,0.2); border-radius: 1.2rem; padding: 1rem; border: 1px solid rgba(255,255,255,0.05);">
+          <strong style="display: block;">Conversion</strong>
+          <span class="text-muted" style="font-size: 0.9rem;">Sharper CTAs, product hierarchy, trust signals.</span>
+        </div>
+      </div>
+      <div style="margin-top: 1.5rem; padding: 1rem; border-radius: 1.2rem; background: rgba(139,35,49,0.12); border-left: 3px solid #8b2331;">
+        <span style="font-size: 0.7rem; letter-spacing: 0.1em; color: #cfa6ad;">MENTOR</span>
+        <p style="margin-top: 0.3rem; font-weight: 500;">Mariam / Success Academy</p>
+        <p class="text-muted" style="font-size: 0.85rem;">Shopify structure & storefront execution</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- about section -->
+  <div id="about" style="margin-bottom: 4rem;">
+    <div class="text-center" style="margin-bottom: 1.5rem;">
+      <span class="accent-badge">Background</span>
+    </div>
+    <div class="card-dark p-6" style="max-width: 900px; margin: 0 auto;">
+      <h2 class="text-center" style="margin-bottom: 1rem;">Sales-aware Shopify support</h2>
+      <p class="text-muted text-center" style="max-width: 780px; margin: 0 auto;">Store setup, product organization, theme tweaks — backed by real commerce logic. I blend front-end clarity with customer psychology to make stores intuitive and profitable.</p>
+    </div>
+  </div>
+
+  <!-- services section -->
+  <div id="services" style="margin-bottom: 4rem;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <span class="accent-badge">What I do</span>
+      <h2 style="margin-top: 0.8rem;">Focused Shopify solutions</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card-soft p-5 service-card">
+        <div style="font-size: 2rem; margin-bottom: 0.8rem;">📦</div>
+        <h3>Store setup</h3>
+        <p class="text-muted" style="margin-top: 0.5rem;">Products, collections, navigation — structured and ready to sell.</p>
+      </div>
+      <div class="card-soft p-5 service-card">
+        <div style="font-size: 2rem; margin-bottom: 0.8rem;">🛍️</div>
+        <h3>Product pages</h3>
+        <p class="text-muted" style="margin-top: 0.5rem;">Better hierarchy, compelling CTAs, cleaner product storytelling.</p>
+      </div>
+      <div class="card-soft p-5 service-card">
+        <div style="font-size: 2rem; margin-bottom: 0.8rem;">🎨</div>
+        <h3>Customization</h3>
+        <p class="text-muted" style="margin-top: 0.5rem;">Theme edits, HTML/CSS improvements, section adjustments.</p>
+      </div>
+      <div class="card-soft p-5 service-card">
+        <div style="font-size: 2rem; margin-bottom: 0.8rem;">⚡</div>
+        <h3>UX polish</h3>
+        <p class="text-muted" style="margin-top: 0.5rem;">Smooth browsing, mobile optimization, friction-free flow.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- process section -->
+  <div id="process" style="margin-bottom: 4rem;">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <span class="accent-badge">How I work</span>
+      <h2 style="margin-top: 0.8rem;">Simple process, tangible results</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card-soft p-5 step-card">
+        <span style="background: #8b2331; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 2rem; font-weight: 800; margin-bottom: 1rem;">1</span>
+        <h3>Audit</h3>
+        <p class="text-muted">Review store flow, product display, navigation gaps.</p>
+      </div>
+      <div class="card-soft p-5 step-card">
+        <span style="background: #8b2331; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 2rem; font-weight: 800; margin-bottom: 1rem;">2</span>
+        <h3>Refine</h3>
+        <p class="text-muted">Prioritize edits: layout, sections, and UX wins.</p>
+      </div>
+      <div class="card-soft p-5 step-card">
+        <span style="background: #8b2331; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 2rem; font-weight: 800; margin-bottom: 1rem;">3</span>
+        <h3>Deliver</h3>
+        <p class="text-muted">Clean implementation, responsive check, final polish.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- work/cta section (keeps colors) -->
+  <div id="work" style="margin-bottom: 2rem;">
+    <div class="card-dark p-6 text-center" style="background: radial-gradient(circle at top left, rgba(139,35,49,0.2), transparent 60%), #121213;">
+      <span class="accent-badge" style="margin-bottom: 1rem;">Let's collaborate</span>
+      <h2>See live work & connect on Upwork</h2>
+      <p class="text-muted" style="max-width: 550px; margin: 0.75rem auto 1.8rem;">Portfolio, reviews, project details — everything is available on my Upwork profile.</p>
+      <div class="flex gap-2 justify-center">
+        <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">View full profile</a>
+        <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-outline">Message me</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <hr>
+  <div class="flex justify-between flex-wrap" style="padding: 1.5rem 0 0.5rem; color: #8f8780; font-size: 0.85rem;">
+    <span>© 2026 Ofelya Hakobyan</span>
+    <span>Shopify Customization · UX · HTML/CSS</span>
+  </div>
+</div>
 </body>
 </html>
