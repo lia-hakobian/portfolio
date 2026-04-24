@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -75,7 +75,7 @@
 
     .brand {
       font-size: 0.9rem;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       white-space: nowrap;
@@ -111,13 +111,13 @@
       min-height: calc(100vh - 76px);
       display: flex;
       align-items: center;
-      padding: 78px 0 62px;
+      padding: 74px 0 58px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 34px;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
       align-items: center;
     }
 
@@ -131,7 +131,7 @@
       border: 1px solid rgba(255,255,255,0.10);
       background: rgba(255,255,255,0.035);
       color: #dcc8bb;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       letter-spacing: 0.13em;
       text-transform: uppercase;
     }
@@ -145,28 +145,35 @@
       box-shadow: 0 0 18px rgba(122,31,43,0.85);
     }
 
+    h1,
+    .section-title,
+    .upwork-box h2,
+    .cta-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
     h1 {
-      max-width: 820px;
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      line-height: 0.95;
-      font-weight: 900;
-      letter-spacing: -0.06em;
+      max-width: 760px;
+      font-size: clamp(3.3rem, 5.3vw, 5.1rem);
+      line-height: 0.98;
+      font-weight: 700;
+      letter-spacing: -0.035em;
       margin-bottom: 22px;
     }
 
     .hero-lead {
-      max-width: 650px;
+      max-width: 630px;
       color: #d8c7ba;
-      font-size: clamp(1.08rem, 2vw, 1.28rem);
-      line-height: 1.5;
+      font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+      line-height: 1.6;
       margin-bottom: 16px;
       font-weight: 500;
     }
 
     .hero-copy {
-      max-width: 620px;
+      max-width: 600px;
       color: var(--muted);
-      font-size: 1rem;
+      font-size: 0.98rem;
       margin-bottom: 30px;
     }
 
@@ -182,7 +189,7 @@
       justify-content: center;
       padding: 14px 22px;
       border-radius: 999px;
-      font-weight: 700;
+      font-weight: 600;
       border: 1px solid transparent;
       transition: 0.3s ease;
     }
@@ -205,7 +212,7 @@
     }
 
     .hero-card {
-      padding: 32px;
+      padding: 34px;
       border-radius: 34px;
       background:
         radial-gradient(circle at 90% 0%, rgba(122,31,43,0.24), transparent 34%),
@@ -216,10 +223,12 @@
     }
 
     .hero-card h2 {
-      font-size: 1.55rem;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      margin-bottom: 22px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      line-height: 1.12;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
     }
 
     .quick-list {
@@ -237,6 +246,7 @@
     .quick-item strong {
       display: block;
       margin-bottom: 4px;
+      font-weight: 600;
     }
 
     .quick-item span {
@@ -247,7 +257,7 @@
     .mentor-strip {
       position: relative;
       margin-top: 18px;
-      padding: 18px;
+      padding: 20px;
       border-radius: 20px;
       background:
         linear-gradient(135deg, rgba(122,31,43,0.18), rgba(48,70,58,0.12)),
@@ -266,19 +276,26 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
     }
 
-    .mentor-label {
-      display: block;
-      margin-bottom: 6px;
-      color: #caa9ae;
-      font-size: 0.7rem;
+    .mentor-label,
+    .section-kicker,
+    .card-label,
+    .process-label {
+      color: #bb9198;
+      font-size: 0.72rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
+    }
+
+    .mentor-label {
+      display: block;
+      margin-bottom: 7px;
     }
 
     .mentor-strip strong {
       display: block;
       margin-bottom: 4px;
       font-size: 1.02rem;
+      font-weight: 600;
     }
 
     .mentor-strip p {
@@ -287,7 +304,7 @@
     }
 
     .section {
-      padding: 92px 0;
+      padding: 82px 0;
     }
 
     .section-head {
@@ -300,22 +317,19 @@
 
     .section-kicker {
       margin-bottom: 10px;
-      color: #bb9198;
-      font-size: 0.76rem;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
     }
 
     .section-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.03;
-      letter-spacing: -0.05em;
-      font-weight: 850;
+      font-size: clamp(2.35rem, 3.8vw, 3.8rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      font-weight: 600;
     }
 
     .section-sub {
       color: var(--muted);
       max-width: 620px;
+      font-size: 0.98rem;
     }
 
     .cards-grid {
@@ -341,24 +355,26 @@
       border-color: rgba(122,31,43,0.34);
     }
 
-    .card-number {
-      color: #b58f95;
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .card-label {
+      display: inline-block;
       margin-bottom: 22px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .card h3 {
-      font-size: 1.22rem;
-      line-height: 1.18;
-      letter-spacing: -0.03em;
+      font-size: 1.16rem;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
       margin-bottom: 12px;
+      font-weight: 600;
     }
 
     .card p {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
     }
 
     .about-box {
@@ -374,7 +390,7 @@
     .about-box p {
       max-width: 800px;
       color: var(--muted);
-      font-size: 1.04rem;
+      font-size: 1rem;
       margin-bottom: 16px;
     }
 
@@ -396,23 +412,24 @@
       box-shadow: var(--shadow);
     }
 
-    .process-step span {
-      display: block;
-      color: #b58f95;
-      font-size: 0.76rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .process-label {
+      display: inline-block;
       margin-bottom: 14px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .process-step h3 {
-      font-size: 1.08rem;
+      font-size: 1.06rem;
       margin-bottom: 8px;
+      font-weight: 600;
     }
 
     .process-step p {
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 0.93rem;
     }
 
     .upwork-box,
@@ -430,9 +447,10 @@
 
     .upwork-box h2,
     .cta-box h2 {
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      line-height: 1.03;
-      letter-spacing: -0.05em;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      font-weight: 600;
       margin-bottom: 16px;
     }
 
@@ -441,6 +459,7 @@
       max-width: 620px;
       margin: 0 auto 24px;
       color: var(--muted);
+      font-size: 0.98rem;
     }
 
     .proof-pills {
@@ -509,11 +528,15 @@
 
       .hero {
         min-height: auto;
-        padding: 56px 0 36px;
+        padding: 52px 0 34px;
       }
 
       h1 {
-        font-size: 2.7rem;
+        font-size: 3rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
       }
 
       .card,
@@ -526,7 +549,7 @@
       }
 
       .section {
-        padding: 70px 0;
+        padding: 68px 0;
       }
 
       .hero-card,
@@ -653,25 +676,25 @@
 
         <div class="cards-grid">
           <div class="card">
-            <div class="card-number">01</div>
+            <div class="card-label">Setup</div>
             <h3>Store Setup & Structure</h3>
             <p>Products, collections, pages, and store flow organized clearly.</p>
           </div>
 
           <div class="card">
-            <div class="card-number">02</div>
+            <div class="card-label">Product</div>
             <h3>Product Page Improvement</h3>
             <p>Cleaner product layouts, better hierarchy, and stronger CTA focus.</p>
           </div>
 
           <div class="card">
-            <div class="card-number">03</div>
+            <div class="card-label">Custom</div>
             <h3>Shopify Customization</h3>
             <p>Theme edits, section adjustments, and basic HTML/CSS improvements.</p>
           </div>
 
           <div class="card">
-            <div class="card-number">04</div>
+            <div class="card-label">UX</div>
             <h3>Store Optimization</h3>
             <p>UX-focused improvements that make the store easier to browse and use.</p>
           </div>
@@ -694,27 +717,27 @@
 
         <div class="process">
           <div class="process-step">
-            <span>Step 01</span>
-            <h3>Review</h3>
-            <p>Understand the store, layout, products, and current issues.</p>
+            <span class="process-label">Review</span>
+            <h3>Understand the store</h3>
+            <p>Layout, products, flow, and current issues.</p>
           </div>
 
           <div class="process-step">
-            <span>Step 02</span>
-            <h3>Structure</h3>
-            <p>Find what needs clearer flow, better hierarchy, or cleaner organization.</p>
+            <span class="process-label">Structure</span>
+            <h3>Find the friction</h3>
+            <p>What needs clearer flow, hierarchy, or organization.</p>
           </div>
 
           <div class="process-step">
-            <span>Step 03</span>
-            <h3>Improve</h3>
-            <p>Apply practical Shopify edits, layout changes, and storefront refinements.</p>
+            <span class="process-label">Improve</span>
+            <h3>Apply practical edits</h3>
+            <p>Shopify changes, layout updates, and section refinements.</p>
           </div>
 
           <div class="process-step">
-            <span>Step 04</span>
-            <h3>Polish</h3>
-            <p>Check spacing, mobile behavior, clarity, and overall presentation.</p>
+            <span class="process-label">Polish</span>
+            <h3>Check the details</h3>
+            <p>Spacing, mobile behavior, clarity, and presentation.</p>
           </div>
         </div>
       </div>
