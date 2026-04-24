@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ofelya Hakobyan | Shopify Specialist</title>
+  <title>Ofelya Hakobyan — Shopify Specialist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
@@ -16,94 +16,141 @@
 
     body {
       background: #0b0b0c;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       color: #f4f1ed;
       line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* main container */
-    .app {
+    .container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 2rem 1.5rem;
+      padding: 2rem 2rem;
     }
 
-    /* cards and panels — keep colors */
-    .card-dark {
-      background: #121213;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 2rem;
+    /* color palette preserved */
+    :root {
+      --bg: #0b0b0c;
+      --surface: #121213;
+      --surface-elevated: #171718;
+      --border: rgba(255,255,255,0.07);
+      --text-primary: #f4f1ed;
+      --text-secondary: #b6ada6;
+      --text-tertiary: #8f8780;
+      --accent: #8b2331;
+      --accent-glow: rgba(139,35,49,0.2);
+      --gold: #d2b48c;
     }
 
-    .card-soft {
-      background: #171718;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 1.75rem;
+    /* cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
     }
 
-    .accent-badge {
-      background: rgba(139,35,49,0.18);
-      color: #d2b48c;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 2rem;
-      padding: 0.3rem 1rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
+    .card-elevated {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+    }
+
+    /* badges */
+    .badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      background: rgba(139,35,49,0.12);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 2rem;
+      padding: 0.25rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gold);
     }
 
-    .accent-badge::before {
+    .badge-dot::before {
       content: "";
       width: 6px;
       height: 6px;
-      background: #8b2331;
+      background: var(--accent);
       border-radius: 50%;
       display: inline-block;
     }
 
+    /* buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.75rem 1.5rem;
-      border-radius: 3rem;
+      padding: 0.7rem 1.6rem;
+      border-radius: 2.5rem;
       font-weight: 600;
+      font-size: 0.9rem;
       transition: all 0.2s ease;
       text-decoration: none;
+      cursor: pointer;
       border: 1px solid transparent;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #8b2331, #641823);
+      background: linear-gradient(135deg, var(--accent), #5e1622);
       color: white;
-      box-shadow: 0 12px 24px rgba(139,35,49,0.25);
+      box-shadow: 0 8px 20px rgba(139,35,49,0.25);
     }
 
     .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 30px rgba(139,35,49,0.35);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(139,35,49,0.35);
     }
 
-    .btn-outline {
+    .btn-secondary {
       background: transparent;
       border-color: rgba(255,255,255,0.2);
-      color: #f4f1ed;
+      color: var(--text-primary);
     }
 
-    .btn-outline:hover {
-      border-color: #8b2331;
-      background: rgba(139,35,49,0.1);
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      background: rgba(139,35,49,0.08);
     }
 
-    /* layout */
+    /* typography */
+    h1 {
+      font-size: clamp(3rem, 5.5vw, 4.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .text-secondary {
+      color: var(--text-secondary);
+    }
+
+    .text-tertiary {
+      color: var(--text-tertiary);
+    }
+
+    /* layout utilities */
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1.8rem;
+      gap: 2rem;
     }
 
     .grid-3 {
@@ -118,224 +165,229 @@
       gap: 1.5rem;
     }
 
-    /* responsive */
-    @media (max-width: 1000px) {
-      .grid-4 { grid-template-columns: repeat(2, 1fr); }
-      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .flex {
+      display: flex;
     }
 
-    @media (max-width: 760px) {
-      .grid-2 { grid-template-columns: 1fr; }
-      .grid-4 { grid-template-columns: 1fr; }
-      .grid-3 { grid-template-columns: 1fr; }
-      .app { padding: 1.5rem; }
+    .flex-between {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    /* typography */
-    h1 {
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      line-height: 1.1;
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
+    .gap-2 { gap: 0.75rem; }
+    .gap-3 { gap: 1.25rem; }
+    .gap-4 { gap: 2rem; }
 
-    h3 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .text-muted {
-      color: #b6ada6;
-    }
-
-    .text-gold {
-      color: #d2b48c;
-    }
-
-    /* spacing */
     .mt-1 { margin-top: 0.5rem; }
     .mt-2 { margin-top: 1rem; }
     .mt-3 { margin-top: 1.5rem; }
+    .mt-4 { margin-top: 2rem; }
     .mb-1 { margin-bottom: 0.5rem; }
     .mb-2 { margin-bottom: 1rem; }
     .mb-3 { margin-bottom: 1.5rem; }
     .mb-4 { margin-bottom: 2rem; }
+    .mb-5 { margin-bottom: 3rem; }
+
+    .p-4 { padding: 1.5rem; }
     .p-5 { padding: 2rem; }
     .p-6 { padding: 2.5rem; }
-    .gap-2 { gap: 1rem; }
-    .flex { display: flex; }
-    .flex-wrap { flex-wrap: wrap; }
-    .items-center { align-items: center; }
-    .justify-between { justify-content: space-between; }
-    .justify-center { justify-content: center; }
+
     .text-center { text-align: center; }
 
     hr {
       border: none;
       height: 1px;
-      background: rgba(255,255,255,0.08);
-      margin: 1rem 0;
+      background: var(--border);
+      margin: 2rem 0;
     }
 
-    /* hover effects */
-    .service-card, .step-card {
-      transition: all 0.2s;
+    /* hover */
+    .service-card, .pillar-card, .step-card {
+      transition: all 0.25s ease;
     }
-    .service-card:hover, .step-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(139,35,49,0.4);
-      background: rgba(255,255,255,0.03);
+
+    .service-card:hover, .pillar-card:hover, .step-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(139,35,49,0.35);
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .container { padding: 1.5rem; }
+    }
+
+    @media (max-width: 700px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: 1fr; }
+      .flex-between { flex-direction: column; gap: 1rem; align-items: flex-start; }
+      .p-6 { padding: 1.5rem; }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-link {
+      color: var(--text-secondary);
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
     }
   </style>
 </head>
 <body>
-<div class="app">
+<div class="container">
 
-  <!-- header -->
-  <div class="flex justify-between items-center flex-wrap" style="margin-bottom: 3rem;">
-    <div>
-      <span style="font-weight: 800; letter-spacing: -0.02em; font-size: 1.2rem;">Ofelya Hakobyan</span>
-    </div>
-    <div class="flex gap-2 flex-wrap mt-1">
-      <a href="#about" style="color: #b6ada6; text-decoration: none; padding: 0.5rem 0.8rem; font-weight: 500;">About</a>
-      <a href="#services" style="color: #b6ada6; text-decoration: none; padding: 0.5rem 0.8rem; font-weight: 500;">Services</a>
-      <a href="#process" style="color: #b6ada6; text-decoration: none; padding: 0.5rem 0.8rem; font-weight: 500;">Process</a>
-      <a href="#work" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.15); border-radius: 2rem; padding: 0.5rem 1.2rem; text-decoration: none; color: white; font-weight: 600;">Work with me</a>
+  <!-- navigation -->
+  <div class="flex-between" style="margin-bottom: 3.5rem;">
+    <span style="font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em;">Ofelya Hakobyan</span>
+    <div class="flex gap-3">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#process" class="nav-link">Process</a>
+      <a href="#contact" class="btn btn-secondary" style="padding: 0.4rem 1.2rem;">Contact</a>
     </div>
   </div>
 
-  <!-- hero section -->
+  <!-- hero -->
   <div class="grid-2" style="margin-bottom: 4rem;">
-    <!-- left block -->
-    <div class="card-dark p-6" style="display: flex; flex-direction: column; justify-content: center;">
-      <div class="accent-badge" style="width: fit-content; margin-bottom: 1.2rem;">Shopify Customization</div>
-      <h1>Clean, convert-ready stores that feel effortless.</h1>
-      <p class="text-muted" style="font-size: 1.1rem; margin: 1rem 0 0.8rem 0;">UX-led Shopify edits — structure, product pages, and conversion flow.</p>
-      <p style="color: #8f8780; margin-bottom: 1.8rem;">Theme adjustments, collections, and front-end refinement without the clutter.</p>
+    <div class="card p-6" style="background: var(--surface);">
+      <div class="badge badge-dot" style="margin-bottom: 1.25rem;">Shopify Specialist</div>
+      <h1>Stores that convert through clarity.</h1>
+      <p class="text-secondary" style="font-size: 1.1rem; margin: 1rem 0 0.5rem 0;">Shopify customization, UX refinement, and front-end polish that drives results.</p>
+      <p class="text-tertiary" style="margin-bottom: 1.75rem; font-size: 0.95rem;">Theme edits, product structure, and friction-free customer journeys.</p>
       <div class="flex gap-2">
-        <a href="#services" class="btn btn-primary">Explore services</a>
-        <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-outline">Upwork profile</a>
+        <a href="#services" class="btn btn-primary">View services</a>
+        <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-secondary">Upwork ↗</a>
       </div>
     </div>
 
-    <!-- right block / focus -->
-    <div class="card-soft p-6">
-      <div class="accent-badge" style="margin-bottom: 1rem;">Core focus</div>
-      <h3 style="margin-bottom: 1rem;">Three pillars of a high-performance shop</h3>
-      <div style="display: flex; flex-direction: column; gap: 1rem;">
-        <div style="background: rgba(0,0,0,0.2); border-radius: 1.2rem; padding: 1rem; border: 1px solid rgba(255,255,255,0.05);">
-          <strong style="display: block;">Structure</strong>
-          <span class="text-muted" style="font-size: 0.9rem;">Logical collections, clean layout, easy navigation.</span>
+    <div class="card p-6" style="background: var(--surface-elevated);">
+      <div class="badge" style="margin-bottom: 1rem;">Core methodology</div>
+      <h3 style="margin-bottom: 1.25rem;">Three pillars of high‑performance Shopify</h3>
+      <div class="flex" style="flex-direction: column; gap: 0.75rem;">
+        <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 1rem; border-left: 2px solid var(--accent);">
+          <strong>Information architecture</strong>
+          <p class="text-tertiary" style="font-size: 0.85rem; margin-top: 0.2rem;">Collections, navigation, and logical product grouping.</p>
         </div>
-        <div style="background: rgba(0,0,0,0.2); border-radius: 1.2rem; padding: 1rem; border: 1px solid rgba(255,255,255,0.05);">
-          <strong style="display: block;">Usability</strong>
-          <span class="text-muted" style="font-size: 0.9rem;">Reduced friction, mobile polish, intuitive flow.</span>
+        <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 1rem; border-left: 2px solid var(--accent);">
+          <strong>Conversion-centered UX</strong>
+          <p class="text-tertiary" style="font-size: 0.85rem; margin-top: 0.2rem;">Clear CTAs, hierarchy, and reduced checkout friction.</p>
         </div>
-        <div style="background: rgba(0,0,0,0.2); border-radius: 1.2rem; padding: 1rem; border: 1px solid rgba(255,255,255,0.05);">
-          <strong style="display: block;">Conversion</strong>
-          <span class="text-muted" style="font-size: 0.9rem;">Sharper CTAs, product hierarchy, trust signals.</span>
+        <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 1rem; border-left: 2px solid var(--accent);">
+          <strong>Technical precision</strong>
+          <p class="text-tertiary" style="font-size: 0.85rem; margin-top: 0.2rem;">HTML/CSS, theme sections, and responsive polish.</p>
         </div>
       </div>
-      <div style="margin-top: 1.5rem; padding: 1rem; border-radius: 1.2rem; background: rgba(139,35,49,0.12); border-left: 3px solid #8b2331;">
-        <span style="font-size: 0.7rem; letter-spacing: 0.1em; color: #cfa6ad;">MENTOR</span>
-        <p style="margin-top: 0.3rem; font-weight: 500;">Mariam / Success Academy</p>
-        <p class="text-muted" style="font-size: 0.85rem;">Shopify structure & storefront execution</p>
+      <div class="mt-3" style="padding: 1rem; border-radius: 1rem; background: rgba(139,35,49,0.08);">
+        <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold);">Mentorship</span>
+        <p style="font-size: 0.9rem; margin-top: 0.25rem;"><strong>Mariam / Success Academy</strong> — Shopify structure & storefront execution</p>
       </div>
     </div>
   </div>
 
-  <!-- about section -->
-  <div id="about" style="margin-bottom: 4rem;">
-    <div class="text-center" style="margin-bottom: 1.5rem;">
-      <span class="accent-badge">Background</span>
+  <!-- about -->
+  <div id="about" class="mb-5">
+    <div class="text-center mb-3">
+      <span class="badge">About</span>
     </div>
-    <div class="card-dark p-6" style="max-width: 900px; margin: 0 auto;">
-      <h2 class="text-center" style="margin-bottom: 1rem;">Sales-aware Shopify support</h2>
-      <p class="text-muted text-center" style="max-width: 780px; margin: 0 auto;">Store setup, product organization, theme tweaks — backed by real commerce logic. I blend front-end clarity with customer psychology to make stores intuitive and profitable.</p>
+    <div class="card p-6" style="max-width: 880px; margin: 0 auto; text-align: center;">
+      <h2 style="margin-bottom: 1rem;">Sales strategy meets Shopify execution.</h2>
+      <p class="text-secondary" style="max-width: 700px; margin: 0 auto;">With a background in sales and account management, I don't just edit code — I optimize for customer behavior. Store setup, product presentation, and seamless navigation that converts visitors into buyers.</p>
     </div>
   </div>
 
-  <!-- services section -->
-  <div id="services" style="margin-bottom: 4rem;">
-    <div style="text-align: center; margin-bottom: 2rem;">
-      <span class="accent-badge">What I do</span>
-      <h2 style="margin-top: 0.8rem;">Focused Shopify solutions</h2>
+  <!-- services -->
+  <div id="services" class="mb-5">
+    <div class="text-center mb-4">
+      <span class="badge">Expertise</span>
+      <h2 class="mt-2">What I deliver</h2>
     </div>
     <div class="grid-4">
-      <div class="card-soft p-5 service-card">
-        <div style="font-size: 2rem; margin-bottom: 0.8rem;">📦</div>
+      <div class="card p-5 service-card">
+        <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🛒</div>
         <h3>Store setup</h3>
-        <p class="text-muted" style="margin-top: 0.5rem;">Products, collections, navigation — structured and ready to sell.</p>
+        <p class="text-tertiary" style="margin-top: 0.5rem; font-size: 0.9rem;">Full product & collection structuring. Ready to scale.</p>
       </div>
-      <div class="card-soft p-5 service-card">
-        <div style="font-size: 2rem; margin-bottom: 0.8rem;">🛍️</div>
+      <div class="card p-5 service-card">
+        <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">📄</div>
         <h3>Product pages</h3>
-        <p class="text-muted" style="margin-top: 0.5rem;">Better hierarchy, compelling CTAs, cleaner product storytelling.</p>
+        <p class="text-tertiary" style="margin-top: 0.5rem; font-size: 0.9rem;">Better layout, persuasive hierarchy, optimized CTAs.</p>
       </div>
-      <div class="card-soft p-5 service-card">
-        <div style="font-size: 2rem; margin-bottom: 0.8rem;">🎨</div>
-        <h3>Customization</h3>
-        <p class="text-muted" style="margin-top: 0.5rem;">Theme edits, HTML/CSS improvements, section adjustments.</p>
+      <div class="card p-5 service-card">
+        <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🎨</div>
+        <h3>Theme customization</h3>
+        <p class="text-tertiary" style="margin-top: 0.5rem; font-size: 0.9rem;">HTML/CSS edits, section adjustments, design polish.</p>
       </div>
-      <div class="card-soft p-5 service-card">
-        <div style="font-size: 2rem; margin-bottom: 0.8rem;">⚡</div>
-        <h3>UX polish</h3>
-        <p class="text-muted" style="margin-top: 0.5rem;">Smooth browsing, mobile optimization, friction-free flow.</p>
+      <div class="card p-5 service-card">
+        <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">⚡</div>
+        <h3>UX optimization</h3>
+        <p class="text-tertiary" style="margin-top: 0.5rem; font-size: 0.9rem;">Mobile-first, frictionless flow, conversion clarity.</p>
       </div>
     </div>
   </div>
 
-  <!-- process section -->
-  <div id="process" style="margin-bottom: 4rem;">
-    <div style="text-align: center; margin-bottom: 2rem;">
-      <span class="accent-badge">How I work</span>
-      <h2 style="margin-top: 0.8rem;">Simple process, tangible results</h2>
+  <!-- process -->
+  <div id="process" class="mb-5">
+    <div class="text-center mb-4">
+      <span class="badge">Process</span>
+      <h2 class="mt-2">How we work together</h2>
     </div>
     <div class="grid-3">
-      <div class="card-soft p-5 step-card">
-        <span style="background: #8b2331; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 2rem; font-weight: 800; margin-bottom: 1rem;">1</span>
-        <h3>Audit</h3>
-        <p class="text-muted">Review store flow, product display, navigation gaps.</p>
+      <div class="card p-5 step-card">
+        <div style="width: 2rem; height: 2rem; background: var(--accent); border-radius: 2rem; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 1rem;">1</div>
+        <h3>Discovery</h3>
+        <p class="text-tertiary" style="margin-top: 0.5rem;">Audit current store, identify friction points, define goals.</p>
       </div>
-      <div class="card-soft p-5 step-card">
-        <span style="background: #8b2331; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 2rem; font-weight: 800; margin-bottom: 1rem;">2</span>
-        <h3>Refine</h3>
-        <p class="text-muted">Prioritize edits: layout, sections, and UX wins.</p>
+      <div class="card p-5 step-card">
+        <div style="width: 2rem; height: 2rem; background: var(--accent); border-radius: 2rem; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 1rem;">2</div>
+        <h3>Execution</h3>
+        <p class="text-tertiary" style="margin-top: 0.5rem;">Theme edits, restructure, UX improvements, and testing.</p>
       </div>
-      <div class="card-soft p-5 step-card">
-        <span style="background: #8b2331; width: 2rem; height: 2rem; display: inline-flex; align-items: center; justify-content: center; border-radius: 2rem; font-weight: 800; margin-bottom: 1rem;">3</span>
-        <h3>Deliver</h3>
-        <p class="text-muted">Clean implementation, responsive check, final polish.</p>
+      <div class="card p-5 step-card">
+        <div style="width: 2rem; height: 2rem; background: var(--accent); border-radius: 2rem; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 1rem;">3</div>
+        <h3>Polish & launch</h3>
+        <p class="text-tertiary" style="margin-top: 0.5rem;">Final review, responsive checks, and performance handoff.</p>
       </div>
     </div>
   </div>
 
-  <!-- work/cta section (keeps colors) -->
-  <div id="work" style="margin-bottom: 2rem;">
-    <div class="card-dark p-6 text-center" style="background: radial-gradient(circle at top left, rgba(139,35,49,0.2), transparent 60%), #121213;">
-      <span class="accent-badge" style="margin-bottom: 1rem;">Let's collaborate</span>
-      <h2>See live work & connect on Upwork</h2>
-      <p class="text-muted" style="max-width: 550px; margin: 0.75rem auto 1.8rem;">Portfolio, reviews, project details — everything is available on my Upwork profile.</p>
+  <!-- contact / work CTA -->
+  <div id="contact" class="mb-4">
+    <div class="card p-6 text-center" style="background: radial-gradient(circle at 20% 30%, rgba(139,35,49,0.12), transparent 70%), var(--surface);">
+      <span class="badge" style="margin-bottom: 1rem;">Get in touch</span>
+      <h2>Ready to elevate your Shopify store?</h2>
+      <p class="text-secondary" style="max-width: 520px; margin: 0.75rem auto 1.75rem;">View my portfolio, client reviews, and service catalog on Upwork.</p>
       <div class="flex gap-2 justify-center">
-        <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">View full profile</a>
-        <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-outline">Message me</a>
+        <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">Upwork profile →</a>
+        <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-secondary">Message directly</a>
       </div>
     </div>
   </div>
+
+  <hr>
 
   <!-- footer -->
-  <hr>
-  <div class="flex justify-between flex-wrap" style="padding: 1.5rem 0 0.5rem; color: #8f8780; font-size: 0.85rem;">
-    <span>© 2026 Ofelya Hakobyan</span>
-    <span>Shopify Customization · UX · HTML/CSS</span>
+  <div class="flex-between" style="padding: 0.5rem 0 1rem;">
+    <span class="text-tertiary" style="font-size: 0.8rem;">© 2026 Ofelya Hakobyan</span>
+    <span class="text-tertiary" style="font-size: 0.8rem;">Shopify Customization · Conversion UX · Front‑end</span>
   </div>
+
 </div>
 </body>
 </html>
