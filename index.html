@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Ofelya Hakobyan | Shopify Store Improvement</title>
+  <title>Ofelya Hakobyan | Shopify Specialist</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,13 @@
     :root {
       --bg: #090909;
       --panel: rgba(255,255,255,0.045);
-      --panel-strong: rgba(255,255,255,0.075);
       --border: rgba(255,255,255,0.10);
       --text: #f4f1ed;
       --muted: #b7aea7;
       --muted-2: #8f8780;
       --accent: #7a1f2b;
       --green: #30463a;
-      --brown: #2a2019;
-      --shadow: 0 24px 70px rgba(0,0,0,0.45);
+      --shadow: 0 24px 70px rgba(0,0,0,0.42);
       --max: 1180px;
     }
 
@@ -86,7 +84,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 24px;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
@@ -149,24 +147,24 @@
 
     h1 {
       max-width: 820px;
-      font-size: clamp(3rem, 6vw, 5.6rem);
-      line-height: 0.94;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 0.95;
       font-weight: 900;
       letter-spacing: -0.06em;
       margin-bottom: 22px;
     }
 
     .hero-lead {
-      max-width: 680px;
+      max-width: 650px;
       color: #d8c7ba;
-      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-size: clamp(1.08rem, 2vw, 1.28rem);
       line-height: 1.5;
       margin-bottom: 16px;
       font-weight: 500;
     }
 
     .hero-copy {
-      max-width: 650px;
+      max-width: 620px;
       color: var(--muted);
       font-size: 1rem;
       margin-bottom: 30px;
@@ -176,7 +174,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 34px;
     }
 
     .btn {
@@ -207,32 +204,6 @@
       transform: translateY(-2px);
     }
 
-    .quick-proof {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      max-width: 760px;
-    }
-
-    .proof-box {
-      padding: 18px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.075);
-      box-shadow: var(--shadow);
-    }
-
-    .proof-box strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 0.95rem;
-    }
-
-    .proof-box span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
     .hero-card {
       padding: 32px;
       border-radius: 34px;
@@ -244,55 +215,38 @@
       box-shadow: var(--shadow);
     }
 
-    .hero-card-title {
+    .hero-card h2 {
       font-size: 1.55rem;
-      line-height: 1.12;
+      line-height: 1.15;
       letter-spacing: -0.04em;
       margin-bottom: 22px;
     }
 
-    .audit-list {
+    .quick-list {
       display: grid;
       gap: 14px;
-      margin-bottom: 24px;
     }
 
-    .audit-item {
-      display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 12px;
-      align-items: start;
-      padding: 14px;
+    .quick-item {
+      padding: 16px;
       border-radius: 18px;
       background: rgba(0,0,0,0.18);
       border: 1px solid rgba(255,255,255,0.06);
     }
 
-    .audit-number {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-size: 0.78rem;
-      color: #f2e7df;
-      background: rgba(122,31,43,0.55);
-      border: 1px solid rgba(255,255,255,0.10);
-    }
-
-    .audit-item strong {
+    .quick-item strong {
       display: block;
-      margin-bottom: 2px;
-      font-size: 0.95rem;
+      margin-bottom: 4px;
     }
 
-    .audit-item span {
+    .quick-item span {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
 
     .mentor-strip {
       position: relative;
+      margin-top: 18px;
       padding: 18px;
       border-radius: 20px;
       background:
@@ -333,7 +287,7 @@
     }
 
     .section {
-      padding: 96px 0;
+      padding: 92px 0;
     }
 
     .section-head {
@@ -364,77 +318,30 @@
       max-width: 620px;
     }
 
-    .problem-solution {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .panel {
-      padding: 34px;
-      border-radius: 28px;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .panel h3 {
-      font-size: 1.35rem;
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
-    }
-
-    .line-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .line-list div {
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-      color: var(--muted);
-    }
-
-    .line-list div:last-child {
-      border-bottom: 0;
-    }
-
-    .service-grid {
+    .cards-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 18px;
     }
 
-    .service-card {
-      grid-column: span 4;
-      min-height: 240px;
-      padding: 30px;
+    .card {
+      grid-column: span 3;
+      min-height: 220px;
+      padding: 28px;
       border-radius: 28px;
       background:
         linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.032));
       border: 1px solid rgba(255,255,255,0.085);
       box-shadow: var(--shadow);
       transition: 0.3s ease;
-      position: relative;
-      overflow: hidden;
     }
 
-    .service-card::after {
-      content: "";
-      position: absolute;
-      left: -45px;
-      bottom: -45px;
-      width: 130px;
-      height: 130px;
-      background: radial-gradient(circle, rgba(122,31,43,0.22), transparent 70%);
-    }
-
-    .service-card:hover {
+    .card:hover {
       transform: translateY(-5px);
       border-color: rgba(122,31,43,0.34);
     }
 
-    .service-number {
+    .card-number {
       color: #b58f95;
       font-size: 0.78rem;
       letter-spacing: 0.12em;
@@ -442,53 +349,75 @@
       margin-bottom: 22px;
     }
 
-    .service-card h3 {
-      font-size: 1.25rem;
+    .card h3 {
+      font-size: 1.22rem;
       line-height: 1.18;
       letter-spacing: -0.03em;
       margin-bottom: 12px;
     }
 
-    .service-card p {
+    .card p {
       color: var(--muted);
       font-size: 0.95rem;
     }
 
-    .method {
+    .about-box {
+      padding: 42px;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at top left, rgba(122,31,43,0.16), transparent 32%),
+        rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .about-box p {
+      max-width: 800px;
+      color: var(--muted);
+      font-size: 1.04rem;
+      margin-bottom: 16px;
+    }
+
+    .about-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .process {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
-    .method-step {
-      padding: 28px;
+    .process-step {
+      padding: 26px;
       border-radius: 26px;
       background: rgba(255,255,255,0.035);
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: var(--shadow);
     }
 
-    .method-step span {
+    .process-step span {
       display: block;
       color: #b58f95;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
-    .method-step h3 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
+    .process-step h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
     }
 
-    .method-step p {
+    .process-step p {
       color: var(--muted);
       font-size: 0.94rem;
     }
 
-    .upwork-box {
-      padding: 48px;
+    .upwork-box,
+    .cta-box {
+      padding: 46px;
       border-radius: 34px;
       text-align: center;
       background:
@@ -499,14 +428,16 @@
       box-shadow: var(--shadow);
     }
 
-    .upwork-box h2 {
+    .upwork-box h2,
+    .cta-box h2 {
       font-size: clamp(2rem, 4vw, 3.1rem);
       line-height: 1.03;
       letter-spacing: -0.05em;
       margin-bottom: 16px;
     }
 
-    .upwork-box p {
+    .upwork-box p,
+    .cta-box p {
       max-width: 620px;
       margin: 0 auto 24px;
       color: var(--muted);
@@ -529,30 +460,6 @@
       font-size: 0.9rem;
     }
 
-    .cta-box {
-      padding: 48px;
-      border-radius: 34px;
-      text-align: center;
-      background:
-        linear-gradient(135deg, rgba(122,31,43,0.18), rgba(48,70,58,0.13)),
-        rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    .cta-box h2 {
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      line-height: 1.03;
-      letter-spacing: -0.05em;
-      margin-bottom: 16px;
-    }
-
-    .cta-box p {
-      max-width: 650px;
-      margin: 0 auto 24px;
-      color: var(--muted);
-    }
-
     footer {
       padding: 36px 0 46px;
       color: var(--muted-2);
@@ -570,17 +477,16 @@
 
     @media (max-width: 1080px) {
       .hero-grid,
-      .section-head,
-      .problem-solution {
+      .section-head {
         grid-template-columns: 1fr;
       }
 
-      .method {
-        grid-template-columns: repeat(2, 1fr);
+      .card {
+        grid-column: span 6;
       }
 
-      .service-card {
-        grid-column: span 6;
+      .process {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -607,25 +513,24 @@
       }
 
       h1 {
-        font-size: 2.65rem;
+        font-size: 2.7rem;
       }
 
-      .quick-proof,
-      .method {
+      .card,
+      .process-step {
+        grid-column: span 12;
+      }
+
+      .process {
         grid-template-columns: 1fr;
       }
 
-      .service-card {
-        grid-column: span 12;
-        min-height: auto;
-      }
-
       .section {
-        padding: 72px 0;
+        padding: 70px 0;
       }
 
-      .panel,
       .hero-card,
+      .about-box,
       .upwork-box,
       .cta-box {
         padding: 24px;
@@ -641,9 +546,9 @@
         <a href="#" class="brand">Ofelya Hakobyan</a>
 
         <div class="nav-links">
-          <a href="#improve">What I Improve</a>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
+          <a href="#about">About</a>
+          <a href="#services">What I Do</a>
+          <a href="#process">How I Work</a>
           <a href="#work">Work</a>
           <a href="#contact" class="nav-cta">Work With Me</a>
         </div>
@@ -656,67 +561,41 @@
       <div class="container">
         <div class="hero-grid">
           <div>
-            <div class="eyebrow">Shopify Store Improvement</div>
+            <div class="eyebrow">Shopify Specialist</div>
 
-            <h1>Make your Shopify store clearer, easier to shop, and ready to convert.</h1>
+            <h1>Hi, I’m Ofelya. I improve Shopify stores.</h1>
 
             <p class="hero-lead">
-              I improve Shopify storefronts through better structure, cleaner layouts, product page refinement, and practical HTML/CSS customization.
+              I help make Shopify stores clearer, easier to use, and better structured.
             </p>
 
             <p class="hero-copy">
-              For brands that need a store that looks polished, feels simple to use, and guides customers toward action.
+              My work focuses on product pages, collections, storefront flow, and practical Shopify customization using HTML/CSS.
             </p>
 
             <div class="hero-actions">
-              <a href="#improve" class="btn btn-primary">See What I Improve</a>
-              <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-secondary">View Upwork Profile</a>
-            </div>
-
-            <div class="quick-proof">
-              <div class="proof-box">
-                <strong>Structure</strong>
-                <span>Cleaner pages, collections, and flow.</span>
-              </div>
-
-              <div class="proof-box">
-                <strong>Usability</strong>
-                <span>Less friction. Easier shopping.</span>
-              </div>
-
-              <div class="proof-box">
-                <strong>Conversion</strong>
-                <span>Sharper product presentation.</span>
-              </div>
+              <a href="#services" class="btn btn-primary">See What I Do</a>
+              <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-secondary">View Upwork</a>
             </div>
           </div>
 
           <aside class="hero-card">
-            <h2 class="hero-card-title">A better storefront starts with the shopping experience.</h2>
+            <h2>What I focus on inside a Shopify store</h2>
 
-            <div class="audit-list">
-              <div class="audit-item">
-                <div class="audit-number">1</div>
-                <div>
-                  <strong>Clarify the structure</strong>
-                  <span>Pages, sections, and collections should feel easy to understand.</span>
-                </div>
+            <div class="quick-list">
+              <div class="quick-item">
+                <strong>Structure</strong>
+                <span>Cleaner pages, collections, and layout flow.</span>
               </div>
 
-              <div class="audit-item">
-                <div class="audit-number">2</div>
-                <div>
-                  <strong>Improve the flow</strong>
-                  <span>Customers should know where to look and what to do next.</span>
-                </div>
+              <div class="quick-item">
+                <strong>Usability</strong>
+                <span>A smoother experience for customers.</span>
               </div>
 
-              <div class="audit-item">
-                <div class="audit-number">3</div>
-                <div>
-                  <strong>Refine the details</strong>
-                  <span>Spacing, hierarchy, buttons, and content all shape trust.</span>
-                </div>
+              <div class="quick-item">
+                <strong>Conversion</strong>
+                <span>Better product presentation and clearer actions.</span>
               </div>
             </div>
 
@@ -730,39 +609,31 @@
       </div>
     </section>
 
-    <section id="improve" class="section">
+    <section id="about" class="section">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="section-kicker">What I Improve</div>
-            <h2 class="section-title">The parts of a Shopify store that directly shape customer experience.</h2>
+            <div class="section-kicker">About</div>
+            <h2 class="section-title">A practical Shopify specialist with a sales-aware eye.</h2>
           </div>
 
           <p class="section-sub">
-            I focus on practical changes that make the store easier to browse, understand, and buy from.
+            I care about how a store looks, how it works, and how clearly it guides a customer.
           </p>
         </div>
 
-        <div class="problem-solution">
-          <div class="panel">
-            <h3>Common store problems</h3>
-            <div class="line-list">
-              <div>Messy sections or unclear page flow</div>
-              <div>Product pages that do not guide action</div>
-              <div>Collections that feel hard to browse</div>
-              <div>Layout issues on mobile or desktop</div>
-            </div>
-          </div>
+        <div class="about-box">
+          <p>
+            I work with Shopify store setup, product organization, collection structure, theme sections, and front-end customization.
+          </p>
 
-          <div class="panel">
-            <h3>What I help create</h3>
-            <div class="line-list">
-              <div>Cleaner structure and stronger hierarchy</div>
-              <div>Better product presentation and CTA focus</div>
-              <div>Smoother browsing and navigation</div>
-              <div>Practical Shopify edits using HTML/CSS</div>
-            </div>
-          </div>
+          <p>
+            My background in sales and account management helps me understand customer behavior, product presentation, and decision-making.
+          </p>
+
+          <p>
+            The goal is simple: make the store cleaner, easier to shop, and more polished.
+          </p>
         </div>
       </div>
     </section>
@@ -771,50 +642,38 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Services</div>
-            <h2 class="section-title">Focused Shopify support without unnecessary complexity.</h2>
+            <div class="section-kicker">What I Do</div>
+            <h2 class="section-title">Focused Shopify support, without overcomplicating the store.</h2>
           </div>
 
           <p class="section-sub">
-            Clean updates, useful fixes, and storefront improvements that support the customer journey.
+            Clear fixes, useful structure, and better storefront presentation.
           </p>
         </div>
 
-        <div class="service-grid">
-          <div class="service-card">
-            <div class="service-number">01</div>
-            <h3>Shopify Customization & Fixes</h3>
-            <p>Theme edits, section updates, spacing fixes, and storefront refinements.</p>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-number">01</div>
+            <h3>Store Setup & Structure</h3>
+            <p>Products, collections, pages, and store flow organized clearly.</p>
           </div>
 
-          <div class="service-card">
-            <div class="service-number">02</div>
+          <div class="card">
+            <div class="card-number">02</div>
             <h3>Product Page Improvement</h3>
-            <p>Cleaner layouts, better hierarchy, stronger CTA focus, and clearer product flow.</p>
+            <p>Cleaner product layouts, better hierarchy, and stronger CTA focus.</p>
           </div>
 
-          <div class="service-card">
-            <div class="service-number">03</div>
-            <h3>Store Structure & Setup</h3>
-            <p>Products, collections, pages, and storefront organization built with clarity.</p>
+          <div class="card">
+            <div class="card-number">03</div>
+            <h3>Shopify Customization</h3>
+            <p>Theme edits, section adjustments, and basic HTML/CSS improvements.</p>
           </div>
 
-          <div class="service-card">
-            <div class="service-number">04</div>
-            <h3>UX-Focused Optimization</h3>
-            <p>Improvements that reduce confusion and make the store easier to shop.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-number">05</div>
-            <h3>HTML/CSS Storefront Edits</h3>
-            <p>Basic front-end customization for cleaner, more polished Shopify sections.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-number">06</div>
-            <h3>Maintenance & Updates</h3>
-            <p>Ongoing fixes, changes, improvements, and practical support as the store evolves.</p>
+          <div class="card">
+            <div class="card-number">04</div>
+            <h3>Store Optimization</h3>
+            <p>UX-focused improvements that make the store easier to browse and use.</p>
           </div>
         </div>
       </div>
@@ -824,35 +683,35 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Process</div>
-            <h2 class="section-title">Simple workflow. Clear direction. Practical execution.</h2>
+            <div class="section-kicker">How I Work</div>
+            <h2 class="section-title">Simple process. Clear improvements.</h2>
           </div>
 
           <p class="section-sub">
-            I look at the store from both a structure and customer-behavior point of view.
+            I look at the store from both a structure and customer-experience point of view.
           </p>
         </div>
 
-        <div class="method">
-          <div class="method-step">
+        <div class="process">
+          <div class="process-step">
             <span>Step 01</span>
             <h3>Review</h3>
-            <p>Understand the store, pages, products, and current friction points.</p>
+            <p>Understand the store, layout, products, and current issues.</p>
           </div>
 
-          <div class="method-step">
+          <div class="process-step">
             <span>Step 02</span>
             <h3>Structure</h3>
-            <p>Identify what needs cleaner flow, stronger hierarchy, or better organization.</p>
+            <p>Find what needs clearer flow, better hierarchy, or cleaner organization.</p>
           </div>
 
-          <div class="method-step">
+          <div class="process-step">
             <span>Step 03</span>
             <h3>Improve</h3>
             <p>Apply practical Shopify edits, layout changes, and storefront refinements.</p>
           </div>
 
-          <div class="method-step">
+          <div class="process-step">
             <span>Step 04</span>
             <h3>Polish</h3>
             <p>Check spacing, mobile behavior, clarity, and overall presentation.</p>
@@ -864,17 +723,17 @@
     <section id="work" class="section">
       <div class="container">
         <div class="upwork-box">
-          <div class="section-kicker">Work & Proof</div>
-          <h2>Full portfolio and work history are available on Upwork.</h2>
+          <div class="section-kicker">Work</div>
+          <h2>Full portfolio and work details are available on Upwork.</h2>
 
           <p>
-            View my profile, project details, client-facing services, and current availability directly on Upwork.
+            View my profile, services, project details, and current availability directly on Upwork.
           </p>
 
           <div class="proof-pills">
             <span class="pill">Shopify storefronts</span>
             <span class="pill">Product pages</span>
-            <span class="pill">UX improvements</span>
+            <span class="pill">UX updates</span>
             <span class="pill">HTML/CSS edits</span>
           </div>
 
@@ -888,10 +747,10 @@
         <div class="cta-box">
           <div class="section-kicker">Let’s Work Together</div>
 
-          <h2>Need your Shopify store to feel cleaner and easier to shop?</h2>
+          <h2>Need help improving your Shopify store?</h2>
 
           <p>
-            I can help with customization, store structure, product page improvement, UX-focused updates, and ongoing Shopify support.
+            I can help with store setup, product pages, customization, optimization, and ongoing Shopify updates.
           </p>
 
           <a href="https://www.upwork.com/freelancers/~01b53803e51f4f0246" target="_blank" class="btn btn-primary">Contact via Upwork</a>
@@ -904,7 +763,7 @@
     <div class="container">
       <div class="footer-row">
         <div>© 2026 Ofelya Hakobyan</div>
-        <div>Shopify Store Improvement & Customization</div>
+        <div>Shopify Customization & Optimization</div>
       </div>
     </div>
   </footer>
